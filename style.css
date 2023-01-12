@@ -5,8 +5,8 @@ body {
 
 .header {
   width: 100vw;
-  height: 60vh;
-  background-color: #d9e0ff;
+  height: 100vh;
+  background-color: #715aff;
   align-items: center;
   position: absolute;
   background-image: url("mobile_img/background-small.png");
@@ -19,15 +19,18 @@ body {
 }
 .navbar-brand-custom {
   font-family: "Permanent Marker";
-  font-size: 1.2rem;
-  color: black;
+  font-size: 1.4rem;
+  color: #f7ece1;
   font-weight: 100;
+  text-decoration: none;
+  cursor: pointer;
 }
-.navbar-style {
-  background-color: #93c1e7;
+button {
+  background-color: white;
 }
-.nav-link {
+.nav-linka {
   font-size: 0.85rem;
+  color: white;
 }
 .header-end {
   background-color: rgb(255, 255, 255);

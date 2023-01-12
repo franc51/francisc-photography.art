@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  width: 100vw;
+  height: 60vh;
+  background-color: #d9e0ff;
+  align-items: center;
+  position: absolute;
+  background-image: url("mobile_img/background-small.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 5rem 4rem;
+  color: white;
+  font-weight: bold;
+  box-shadow: 1px 10px 15px 2px rgb(173, 173, 173);
+}
+.navbar-brand-custom {
+  font-family: "Permanent Marker";
+  font-size: 1.2rem;
+  color: black;
+  font-weight: 100;
+}
+.navbar-style {
+  background-color: #93c1e7;
+}
+.nav-link {
+  font-size: 0.85rem;
+}
+.header-end {
+  background-color: rgb(255, 255, 255);
+  width: 100vw;
+  height: 50vh;
+}

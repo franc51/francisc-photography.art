@@ -1,3 +1,3 @@
-Started working on a photography portofolio.
+Version B0.01
 
-https://raw.githubusercontent.com/franc51/francisc-foto/main/1366x768.PNG
+http://www.francisc-photography.art/#/

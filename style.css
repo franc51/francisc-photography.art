@@ -4,44 +4,160 @@ body {
 }
 
 .header {
-  width: 100vw;
-  height: 100vh;
-  background-color: #8c52ff;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  position: absolute;
-  background-image: url("mobile_img/eu-mobile-mov.PNG");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 5rem 4rem;
-  color: white;
-  font-weight: bold;
-  box-shadow: 1px 10px 15px 2px rgb(173, 173, 173);
+  margin: 1rem;
+  font-family: "Passero One";
+  background-color: rgb(255, 255, 255);
 }
-.navbar-brand-custom {
-  font-family: "Permanent Marker";
-  font-size: 1.5rem;
-  color: #f7ece1;
-  font-weight: 100;
+.navigation {
+  display: flex;
+  justify-content: center;
+}
+.navigation a {
+  padding-bottom: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   text-decoration: none;
-  cursor: pointer;
-}
-button {
-  background-color: white;
-}
-.nav-linka {
-  font-size: 1rem;
-  color: white;
-  font-weight: 100;
+  color: rgb(71, 71, 71);
+  font-family: "Passero One";
 }
 
-.titlu h2 {
+.navigation a:hover {
+  color: black;
+}
+.navigation2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.menu_button {
+  display: none;
+  cursor: pointer;
+}
+
+.show_button {
+  display: block;
+}
+
+.image-button {
+  display: flex;
+  justify-content: center;
+  margin-top: -1rem;
+}
+.menu-div {
+  display: flex;
+  z-index: 1;
+  height: 100vh;
+  width: 20rem;
+  background-color: rgb(0, 26, 255);
+  opacity: 0.8;
+  position: absolute;
+  left: 27rem;
+  top: -7rem;
+  display: none;
+  transition: 1s ease;
+  transform: translateX(-14rem);
+}
+.animate_bottom {
   position: relative;
-  top: 40vh;
+}
+.show_my_menu {
+  display: block;
+}
+.cover {
+  height: 80vh;
+  width: 100%;
+  background-image: url("mobile_img/eu-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 -10rem;
+  background-attachment: fixed;
   color: white;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 2.5rem;
-  background-color: #8c52ff;
-  border-top: 4px solid white;
-  border-bottom: 4px solid white;
-  padding: 0.4rem;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  position: 2vw -22vw;
+  padding: 17rem 6rem;
+}
+.cover h1 {
+  font-size: 3.2rem;
+  letter-spacing: 0.5rem;
+}
+.cover p {
+  font-family: "Passero One";
+}
+
+@media screen and (max-width: 600px) {
+  .cover {
+    background-position: -30rem -10rem;
+  }
+  .cover h1 {
+    font-size: 2.5rem;
+    width: 20rem;
+    margin-left: -5rem;
+    margin-top: -2rem;
+  }
+  .cover p {
+    margin-left: -5rem;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+  .navigation {
+    display: none;
+  }
+  .navigation2 a {
+    display: block;
+  }
+  .menu_button {
+    display: block;
+  }
+}
+
+/* Load Animation starts here */
+
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 122px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 10px solid rgb(69, 95, 209);
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
 }

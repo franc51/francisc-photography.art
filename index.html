@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FP</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Passero One:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://fonts.googleapis.com/css?family=Poppins"
       rel="stylesheet"
@@ -20,56 +26,51 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
-  <body>
-    <div class="header">
-      <nav class="navbar navbar-expand-lg navbar-light navbar_style">
-        <h1 class="navbar-brand-custom">Francisc Photography</h1>
-        <button
-          class="navbar-toggler bg-light"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-linka" href="#"
-                >Acasă <span class="sr-only">(current)</span></a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-linka" href="#">Galerie</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-linka dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                Servicii
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Nuntă</a>
-                <a class="dropdown-item" href="#">Botez</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Aniversare</a>
-              </div>
-            </li>
-          </ul>
+  <body onload="loadAnimation()">
+    <div id="loader"></div>
+    <div style="display: none" id="myDiv" class="animate-bottom">
+      <div class="header">
+        <h1>FRANCISC PHOTOGRAPHY</h1>
+      </div>
+      <div class="navigation">
+        <a href="">Acasa</a>
+        <a href="">Portofoliu</a>
+        <a href="">Servicii</a>
+        <a href="">Despre mine</a>
+        <a href="">Contact</a>
+      </div>
+      <div class="image-button">
+        <img
+          class="menu_button"
+          id="menu_button"
+          src="mobile_img/icons8-menu-squared-50.png"
+          alt=""
+        />
+      </div>
+      <div id="menu-div" class="menu-div">
+        <a href="">Acasa</a>
+        <a href="">Portofoliu</a>
+        <a href="">Servicii</a>
+        <a href="">Despre mine</a>
+        <a href="">Contact</a>
+        <div class="">
+          <img
+            class=""
+            id=""
+            src="mobile_img/icons8-close-window-50.png"
+            alt=""
+          />
         </div>
-      </nav>
-      <div class="titlu"><h2>Surprinde momentul</h2></div>
+      </div>
+      <div class="cover">
+        <h1 class="desc">FRANCISC PHOTOGRAPHY</h1>
+        <p class="story">BINE AI VENIT RĂU AI NIMERIT</p>
+      </div>
     </div>
 
     <script

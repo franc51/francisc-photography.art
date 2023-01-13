@@ -39,7 +39,12 @@ window.addEventListener("scroll", reveal);
 let menuDiv = document.getElementById("menu-div");
 
 document.getElementById("menu_button").addEventListener("click", showMenu);
+document.getElementById("menu-div").addEventListener("click", exitMenu);
 
 function showMenu() {
   menuDiv.classList.add("show_my_menu");
+}
+
+function exitMenu() {
+  menuDiv.classList.remove("show_my_menu");
 }

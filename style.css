@@ -6,10 +6,10 @@ body {
 .header {
   width: 100vw;
   height: 100vh;
-  background-color: #715aff;
+  background-color: #8c52ff;
   align-items: center;
   position: absolute;
-  background-image: url("mobile_img/background-small.png");
+  background-image: url("mobile_img/eu-mobile-mov.PNG");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 5rem 4rem;
@@ -19,7 +19,7 @@ body {
 }
 .navbar-brand-custom {
   font-family: "Permanent Marker";
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   color: #f7ece1;
   font-weight: 100;
   text-decoration: none;
@@ -29,11 +29,19 @@ button {
   background-color: white;
 }
 .nav-linka {
-  font-size: 0.85rem;
+  font-size: 1rem;
   color: white;
+  font-weight: 100;
 }
-.header-end {
-  background-color: rgb(255, 255, 255);
-  width: 100vw;
-  height: 50vh;
+
+.titlu h2 {
+  position: relative;
+  top: 40vh;
+  color: white;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 2.5rem;
+  background-color: #8c52ff;
+  border-top: 4px solid white;
+  border-bottom: 4px solid white;
+  padding: 0.4rem;
 }

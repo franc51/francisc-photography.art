@@ -3,25 +3,87 @@ body {
   box-sizing: border-box;
 }
 
+/* Load Animation for desktop */
+
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 122px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 6px solid rgb(69, 95, 209);
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.container-image {
+  padding: 1rem;
+}
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 1rem;
+  vertical-align: middle;
+  width: 95%;
+}
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  text-align: center;
   margin: 1rem 0.5rem 0 0.5rem;
   font-family: "Passero One";
   background-color: rgb(255, 255, 255);
+}
+.header h1 {
+  font-size: 3.5rem;
+  letter-spacing: 0.5rem;
 }
 .navigation {
   display: flex;
   justify-content: center;
 }
 .navigation a {
-  padding-bottom: 2rem;
+  font-size: 1.4rem;
+  padding-bottom: 1.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
   text-decoration: none;
   color: rgb(71, 71, 71);
   font-family: "Passero One";
+  text-align: center;
 }
 
 .navigation a:hover {
@@ -71,22 +133,93 @@ body {
   background-image: url("mobile_img/eu-desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 0 -10rem;
+  background-position: 0 -25rem;
   background-attachment: fixed;
   color: white;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   position: 22vw -22vw;
-  padding: 17rem 6rem;
+  padding: 22rem 7rem;
 }
 .cover h1 {
-  font-size: 3.2rem;
+  font-size: 5rem;
   letter-spacing: 0.5rem;
 }
 .cover p {
   font-family: "Passero One";
+  letter-spacing: 0.5rem;
+  font-size: 2rem;
+  padding-left: 0.5rem;
 }
 
 @media screen and (max-width: 600px) {
+  /* Load Animation for mobile */
+
+  #loader {
+    position: absolute;
+    left: 55%;
+    top: 55%;
+    z-index: 1;
+    width: 122px;
+    height: 120px;
+    margin: -76px 0 0 -76px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 6px solid rgb(69, 95, 209);
+    -webkit-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+  }
+
+  @-webkit-keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+    }
+    50% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(360deg);
+    }
+  }
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0.5rem 0 0.5rem;
+    font-family: "Passero One";
+    background-color: rgb(255, 255, 255);
+  }
+  .navigation {
+    display: flex;
+    justify-content: center;
+  }
+  .navigation a {
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-decoration: none;
+    color: rgb(71, 71, 71);
+    font-family: "Passero One";
+    text-align: center;
+  }
+
+  .navigation a:hover {
+    color: black;
+  }
+  .navigation2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .menu_button {
     display: block;
     cursor: pointer;
@@ -106,15 +239,17 @@ body {
     left: 14rem;
     top: -0.2rem;
     display: none;
-    transform: translateX(-14rem);
-    transition: 1s ease-in;
-    transition-delay: 1s;
     text-decoration: none;
-    color: rgb(71, 71, 71);
+    color: rgb(255, 255, 255);
     font-family: "Passero One";
+    transform: translateX(-14rem);
+    -webkit-transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
   }
   .collapsed_menu {
-    height: 30rem;
+    height: 31rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -124,6 +259,7 @@ body {
     font-size: 1.8rem;
     color: white;
     padding-top: 1rem;
+    opacity: 0.7;
   }
   .animate_bottom {
     position: relative;
@@ -132,12 +268,12 @@ body {
     display: block;
   }
   .cover {
-    height: 100vh;
-    width: 100%;
+    height: 110vh;
+    width: 100vw;
     background-image: url("mobile_img/eu-desktop.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: -37rem -3rem;
+    background-position: -42rem -3rem;
     background-attachment: fixed;
     color: white;
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
@@ -153,11 +289,14 @@ body {
   }
   .cover p {
     margin-left: -5rem;
+    letter-spacing: 0;
+    font-size: 1.1rem;
   }
 
   .header h1 {
     font-size: 1.5rem;
     padding-bottom: 0.2rem;
+    letter-spacing: 0;
   }
   .navigation {
     display: none;
@@ -169,42 +308,12 @@ body {
     display: block;
   }
 }
-
-/* Load Animation starts here */
-
-#loader {
-  position: absolute;
-  left: 55%;
-  top: 55%;
-  z-index: 1;
-  width: 122px;
-  height: 120px;
-  margin: -76px 0 0 -76px;
-  border: 16px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 6px solid rgb(69, 95, 209);
-  -webkit-animation: spin 1s linear infinite;
-  animation: spin 1s linear infinite;
-}
-
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-  }
-  50% {
-    -webkit-transform: rotate(360deg);
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
   }
 }
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(360deg);
-  }
-}
-
 .reveal {
   position: relative;
   transform: translateY(150px);

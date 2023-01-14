@@ -1,3 +1,3 @@
-Version B0.01
+Version B0.03
 
 http://www.francisc-photography.art/#/

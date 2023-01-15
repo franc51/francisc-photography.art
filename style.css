@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -143,6 +144,8 @@ body {
 .cover h1 {
   font-size: 5rem;
   letter-spacing: 0.5rem;
+
+  width: 70rem;
 }
 .cover p {
   font-family: "Passero One";
